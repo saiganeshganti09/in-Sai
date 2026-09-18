@@ -352,16 +352,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# =========================================================
-# STATIC FILES
-# =========================================================
-
-app.mount(
-    "/static",
-    StaticFiles(directory=str(BASE_DIR / "static")),
-    name="static"
-)
-
 
 # =========================================================
 # DATABASE SESSION
