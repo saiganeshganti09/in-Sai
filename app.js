@@ -708,6 +708,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response = await fetch(
                 "/recruit",
+                `${API_BASE_URL}/recruit`,
                 {
                     method: "POST",
 
@@ -1191,7 +1192,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                   `${API_BASE_URL}/github/lookup`
+                   `${API_BASE_URL}/github/lookup`,
                     {
                         method: "POST",
 
