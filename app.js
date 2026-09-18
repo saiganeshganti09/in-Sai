@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://YOUR-RENDER-URL.onrender.com";
+const API_BASE_URL = "https://sai-ai-recruiter-backend.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
 
