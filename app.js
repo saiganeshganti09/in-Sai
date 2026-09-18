@@ -2209,7 +2209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                    "/candidates",
+                 `${API_BASE_URL}/candidates`,
                     {
                         method: "POST",
 
@@ -2363,10 +2363,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
 
-            const response =
-                await fetch(
-                    `/candidates/${candidateId}`,
-                    {
+           await fetch(
+    `${API_BASE_URL}/candidates/${candidateId}`,
+    {
                         method: "DELETE"
                     }
                 );
@@ -2888,8 +2887,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
 
             const response =
-                await fetch("/candidates");
-
+    await fetch(`${API_BASE_URL}/candidates`);
 
             if (!response.ok) {
 
@@ -3448,9 +3446,9 @@ ${RECRUITER_BRAND}`;
         try {
 
             const response =
-                await fetch(
-                    "/generate-email",
-                    {
+    await fetch(
+        `${API_BASE_URL}/generate-email`,
+        {
 
                         method: "POST",
 
