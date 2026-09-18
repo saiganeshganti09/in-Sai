@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://YOUR-RENDER-URL.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================================
@@ -1189,7 +1191,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const response =
                 await fetch(
-                    "/github/lookup",
+                   `${API_BASE_URL}/github/lookup`
                     {
                         method: "POST",
 
