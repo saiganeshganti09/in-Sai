@@ -346,7 +346,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://incomparable-figolla-431a45.netlify.app"
+        "https://insai-ai-recruiter.netlify.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],
