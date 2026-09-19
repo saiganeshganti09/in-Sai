@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://sai-ai-recruiter-backend.onrender.com";
+
 /* =========================================================
    TALENTREACH — TALENT POOL
    ========================================================= */
@@ -47,7 +49,7 @@ async function loadTalentPool() {
 
 
         const response =
-            await fetch("/candidates");
+            await fetch(`${API_BASE_URL}/candidates`);
 
 
         if (!response.ok) {
@@ -555,7 +557,7 @@ async function handleGitHubLookup(candidate, button) {
         };
 
         const response =
-            await fetch("/github/lookup", {
+            await fetch(`${API_BASE_URL}/github/lookup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
@@ -762,7 +764,7 @@ function renderGitHubMatches(container, matches) {
 
                 try {
 
-                    const response = await fetch(`/github/insights/${encodeURIComponent(match.username)}`);
+                    const response = await fetch(`${API_BASE_URL}/github/insights/${encodeURIComponent(match.username)}`);
                     const data = await response.json();
 
                     if (response.ok && data.status === "success" && data.insights) {
@@ -829,7 +831,7 @@ async function removeCandidate(candidateId) {
 
         const response =
             await fetch(
-                `/candidates/${candidateId}`,
+                `${API_BASE_URL}/candidates/${candidateId}`,
                 {
                     method: "DELETE"
                 }
