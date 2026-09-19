@@ -542,6 +542,8 @@
 
 <script>
 
+    const API_BASE_URL = "https://sai-ai-recruiter-backend.onrender.com";
+
     // =====================================================
     // GLOBAL VARIABLES
     // =====================================================
@@ -604,7 +606,7 @@
         try {
 
             const response =
-                await fetch("/candidates", {
+                await fetch(`${API_BASE_URL}/candidates`, {
                     method: "GET",
                     headers: {
                         "Accept": "application/json"
@@ -867,7 +869,7 @@
 
                 const response =
                     await fetch(
-                        "/generate-email",
+                        `${API_BASE_URL}/generate-email`,
                         {
                             method: "POST",
 
