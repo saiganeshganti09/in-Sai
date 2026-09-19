@@ -14,7 +14,7 @@
 
     <link
         rel="stylesheet"
-        href="/static/style.css"
+        href="/style.css"
     >
 
 </head>
@@ -583,7 +583,7 @@
          TALENT POOL JAVASCRIPT
     ====================================================== -->
 
-    <script src="/static/talent_pool.js"></script>
+    <script src="/talent_pool.js"></script>
 
 
     <!-- =====================================================
@@ -783,8 +783,10 @@
             }
 
 
+            const API_BASE_URL = "https://sai-ai-recruiter-backend.onrender.com";
+
             const url =
-                "/candidates?" +
+                `${API_BASE_URL}/candidates?` +
                 params.toString();
 
 
